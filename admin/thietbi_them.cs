@@ -134,7 +134,7 @@ namespace EMS.admin
             // Thêm tham số hình ảnh vào lệnh SQL
             
 
-            string query = "INSERT INTO thietbi (id_thietbi, ten_thietbi, loai_thietbi, chucnang_thietbi, model_thietbi, mota_thietbi, nhacungcap_thietbi, ngaymua_thietbi, giathue_thietbi, tinhtrang_thietbi, soluong_thietbi, ngayhetbaothanh_thietbi, noidat, qrcode_thietbi) " +
+            string query = "INSERT INTO thietbi (id_thietbi, ten_thietbi, loai_thietbi, chucnang_thietbi, model_thietbi, mota_thietbi, nhacungcap_thietbi, ngaymua_thietbi, giathue_thietbi, tinhtrang_thietbi, soluong_thietbi, ngayhetbaohanh_thietbi, noidat, qrcode_thietbi) " +
                            "VALUES (@id, @ten, @loai, @chucnang, @model, @mota, @ncc, @ngaymua, @gia, @tinhtrang, @soluong, @ngayhetbaohanh, @noidat, @qr)";
             command = new SqlCommand(query, sqlcon);
             // Thêm các tham số vào lệnh SQL
@@ -153,6 +153,7 @@ namespace EMS.admin
             command.Parameters.AddWithValue("@noidat", tb_them_noidat.Text);
             // Thêm tham số hình ảnh vào lệnh SQL
             command.Parameters.AddWithValue("@qr", imageBytes);
+           
 
             try
             {

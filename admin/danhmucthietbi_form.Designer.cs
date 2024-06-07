@@ -44,17 +44,16 @@
             this.ds_thietbi = new Guna.UI.WinForms.GunaDataGridView();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.dstb_pl_tukhoa = new Guna.UI.WinForms.GunaTextBox();
+            this.dstb_pl_huy = new Guna.UI.WinForms.GunaButton();
             this.dstb_phanloai = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.dstb_pl_vitri = new Guna.UI.WinForms.GunaComboBox();
-            this.dstb_pl_chucnang = new Guna.UI.WinForms.GunaComboBox();
-            this.dstb_pl_loai = new Guna.UI.WinForms.GunaComboBox();
+            this.dstb_pl = new Guna.UI.WinForms.GunaComboBox();
             this.dstb_qrtb = new Guna.UI.WinForms.GunaPictureBox();
             this.dstb_chitiet = new Guna.UI.WinForms.GunaButton();
             this.dstb_id = new System.Windows.Forms.TextBox();
             this.dstb_ten = new System.Windows.Forms.TextBox();
+            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.gunaGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds_thietbi)).BeginInit();
@@ -161,7 +160,7 @@
             this.dstb_lammoi.ForeColor = System.Drawing.Color.White;
             this.dstb_lammoi.Image = ((System.Drawing.Image)(resources.GetObject("dstb_lammoi.Image")));
             this.dstb_lammoi.ImageSize = new System.Drawing.Size(30, 30);
-            this.dstb_lammoi.Location = new System.Drawing.Point(796, 171);
+            this.dstb_lammoi.Location = new System.Drawing.Point(821, 160);
             this.dstb_lammoi.Name = "dstb_lammoi";
             this.dstb_lammoi.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.dstb_lammoi.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -172,6 +171,7 @@
             this.dstb_lammoi.Size = new System.Drawing.Size(49, 31);
             this.dstb_lammoi.TabIndex = 5;
             this.dstb_lammoi.Text = "Làm mới";
+            this.dstb_lammoi.Click += new System.EventHandler(this.dstb_lammoi_Click);
             // 
             // gunaGroupBox2
             // 
@@ -209,6 +209,7 @@
             this.dstb_xoa.Size = new System.Drawing.Size(181, 41);
             this.dstb_xoa.TabIndex = 6;
             this.dstb_xoa.Text = "Xóa";
+            this.dstb_xoa.Click += new System.EventHandler(this.dstb_xoa_Click);
             // 
             // dstb_chinhsua
             // 
@@ -231,6 +232,7 @@
             this.dstb_chinhsua.Size = new System.Drawing.Size(181, 41);
             this.dstb_chinhsua.TabIndex = 5;
             this.dstb_chinhsua.Text = "Chỉnh sửa";
+            this.dstb_chinhsua.Click += new System.EventHandler(this.dstb_chinhsua_Click);
             // 
             // ds_thietbi
             // 
@@ -264,6 +266,7 @@
             this.ds_thietbi.Location = new System.Drawing.Point(19, 208);
             this.ds_thietbi.Name = "ds_thietbi";
             this.ds_thietbi.ReadOnly = true;
+            this.ds_thietbi.RowHeadersVisible = false;
             this.ds_thietbi.RowHeadersWidth = 45;
             this.ds_thietbi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ds_thietbi.Size = new System.Drawing.Size(854, 510);
@@ -306,21 +309,60 @@
             // 
             this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox1.Controls.Add(this.dstb_pl_tukhoa);
+            this.gunaGroupBox1.Controls.Add(this.dstb_pl_huy);
             this.gunaGroupBox1.Controls.Add(this.dstb_phanloai);
-            this.gunaGroupBox1.Controls.Add(this.gunaLabel5);
-            this.gunaGroupBox1.Controls.Add(this.gunaLabel4);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel3);
-            this.gunaGroupBox1.Controls.Add(this.dstb_pl_vitri);
-            this.gunaGroupBox1.Controls.Add(this.dstb_pl_chucnang);
-            this.gunaGroupBox1.Controls.Add(this.dstb_pl_loai);
+            this.gunaGroupBox1.Controls.Add(this.dstb_pl);
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
             this.gunaGroupBox1.Location = new System.Drawing.Point(19, 106);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(751, 96);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(648, 96);
             this.gunaGroupBox1.TabIndex = 8;
             this.gunaGroupBox1.Text = "Phân loại";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             this.gunaGroupBox1.Click += new System.EventHandler(this.gunaGroupBox1_Click);
+            // 
+            // dstb_pl_tukhoa
+            // 
+            this.dstb_pl_tukhoa.BackColor = System.Drawing.Color.Transparent;
+            this.dstb_pl_tukhoa.BaseColor = System.Drawing.Color.Transparent;
+            this.dstb_pl_tukhoa.BorderColor = System.Drawing.Color.LightGray;
+            this.dstb_pl_tukhoa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.dstb_pl_tukhoa.FocusedBaseColor = System.Drawing.Color.Transparent;
+            this.dstb_pl_tukhoa.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dstb_pl_tukhoa.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.dstb_pl_tukhoa.Font = new System.Drawing.Font("Segoe UI", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dstb_pl_tukhoa.ForeColor = System.Drawing.Color.Black;
+            this.dstb_pl_tukhoa.Location = new System.Drawing.Point(218, 39);
+            this.dstb_pl_tukhoa.Name = "dstb_pl_tukhoa";
+            this.dstb_pl_tukhoa.PasswordChar = '\0';
+            this.dstb_pl_tukhoa.Radius = 20;
+            this.dstb_pl_tukhoa.Size = new System.Drawing.Size(282, 46);
+            this.dstb_pl_tukhoa.TabIndex = 2;
+            // 
+            // dstb_pl_huy
+            // 
+            this.dstb_pl_huy.AnimationHoverSpeed = 0.07F;
+            this.dstb_pl_huy.AnimationSpeed = 0.03F;
+            this.dstb_pl_huy.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.dstb_pl_huy.BorderColor = System.Drawing.Color.Black;
+            this.dstb_pl_huy.Font = new System.Drawing.Font("Segoe UI", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dstb_pl_huy.ForeColor = System.Drawing.Color.White;
+            this.dstb_pl_huy.Image = ((System.Drawing.Image)(resources.GetObject("dstb_pl_huy.Image")));
+            this.dstb_pl_huy.ImageSize = new System.Drawing.Size(30, 30);
+            this.dstb_pl_huy.Location = new System.Drawing.Point(587, 44);
+            this.dstb_pl_huy.Name = "dstb_pl_huy";
+            this.dstb_pl_huy.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.dstb_pl_huy.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.dstb_pl_huy.OnHoverForeColor = System.Drawing.Color.White;
+            this.dstb_pl_huy.OnHoverImage = null;
+            this.dstb_pl_huy.OnPressedColor = System.Drawing.Color.Black;
+            this.dstb_pl_huy.Radius = 10;
+            this.dstb_pl_huy.Size = new System.Drawing.Size(51, 41);
+            this.dstb_pl_huy.TabIndex = 7;
+            this.dstb_pl_huy.Text = "Hủy";
+            this.dstb_pl_huy.Click += new System.EventHandler(this.dstb_pl_huy_Click);
             // 
             // dstb_phanloai
             // 
@@ -334,7 +376,7 @@
             this.dstb_phanloai.ForeColor = System.Drawing.Color.Black;
             this.dstb_phanloai.Image = ((System.Drawing.Image)(resources.GetObject("dstb_phanloai.Image")));
             this.dstb_phanloai.ImageSize = new System.Drawing.Size(20, 20);
-            this.dstb_phanloai.Location = new System.Drawing.Point(660, 43);
+            this.dstb_phanloai.Location = new System.Drawing.Point(506, 44);
             this.dstb_phanloai.Name = "dstb_phanloai";
             this.dstb_phanloai.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.dstb_phanloai.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -345,90 +387,35 @@
             this.dstb_phanloai.Size = new System.Drawing.Size(75, 42);
             this.dstb_phanloai.TabIndex = 6;
             this.dstb_phanloai.Text = "Tìm";
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel5.Location = new System.Drawing.Point(441, 35);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(69, 19);
-            this.gunaLabel5.TabIndex = 5;
-            this.gunaLabel5.Text = "Vị trí đặt :";
-            // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(226, 35);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(82, 19);
-            this.gunaLabel4.TabIndex = 4;
-            this.gunaLabel4.Text = "Chức năng :";
+            this.dstb_phanloai.Click += new System.EventHandler(this.dstb_phanloai_Click);
             // 
             // gunaLabel3
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(3, 35);
+            this.gunaLabel3.Location = new System.Drawing.Point(3, 26);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(41, 19);
+            this.gunaLabel3.Size = new System.Drawing.Size(104, 19);
             this.gunaLabel3.TabIndex = 3;
-            this.gunaLabel3.Text = "Loại :";
+            this.gunaLabel3.Text = "Phân loại theo :";
             // 
-            // dstb_pl_vitri
+            // dstb_pl
             // 
-            this.dstb_pl_vitri.BackColor = System.Drawing.Color.Transparent;
-            this.dstb_pl_vitri.BaseColor = System.Drawing.Color.White;
-            this.dstb_pl_vitri.BorderColor = System.Drawing.Color.Silver;
-            this.dstb_pl_vitri.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.dstb_pl_vitri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dstb_pl_vitri.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dstb_pl_vitri.ForeColor = System.Drawing.Color.Black;
-            this.dstb_pl_vitri.FormattingEnabled = true;
-            this.dstb_pl_vitri.Location = new System.Drawing.Point(445, 57);
-            this.dstb_pl_vitri.Name = "dstb_pl_vitri";
-            this.dstb_pl_vitri.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dstb_pl_vitri.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.dstb_pl_vitri.Size = new System.Drawing.Size(209, 28);
-            this.dstb_pl_vitri.TabIndex = 2;
-            // 
-            // dstb_pl_chucnang
-            // 
-            this.dstb_pl_chucnang.BackColor = System.Drawing.Color.Transparent;
-            this.dstb_pl_chucnang.BaseColor = System.Drawing.Color.White;
-            this.dstb_pl_chucnang.BorderColor = System.Drawing.Color.Silver;
-            this.dstb_pl_chucnang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.dstb_pl_chucnang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dstb_pl_chucnang.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dstb_pl_chucnang.ForeColor = System.Drawing.Color.Black;
-            this.dstb_pl_chucnang.FormattingEnabled = true;
-            this.dstb_pl_chucnang.Location = new System.Drawing.Point(230, 57);
-            this.dstb_pl_chucnang.Name = "dstb_pl_chucnang";
-            this.dstb_pl_chucnang.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dstb_pl_chucnang.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.dstb_pl_chucnang.Size = new System.Drawing.Size(209, 28);
-            this.dstb_pl_chucnang.TabIndex = 1;
-            // 
-            // dstb_pl_loai
-            // 
-            this.dstb_pl_loai.BackColor = System.Drawing.Color.Transparent;
-            this.dstb_pl_loai.BaseColor = System.Drawing.Color.White;
-            this.dstb_pl_loai.BorderColor = System.Drawing.Color.Silver;
-            this.dstb_pl_loai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.dstb_pl_loai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dstb_pl_loai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dstb_pl_loai.ForeColor = System.Drawing.Color.Black;
-            this.dstb_pl_loai.FormattingEnabled = true;
-            this.dstb_pl_loai.Location = new System.Drawing.Point(3, 57);
-            this.dstb_pl_loai.Name = "dstb_pl_loai";
-            this.dstb_pl_loai.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dstb_pl_loai.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.dstb_pl_loai.Size = new System.Drawing.Size(209, 28);
-            this.dstb_pl_loai.TabIndex = 0;
+            this.dstb_pl.BackColor = System.Drawing.Color.Transparent;
+            this.dstb_pl.BaseColor = System.Drawing.Color.White;
+            this.dstb_pl.BorderColor = System.Drawing.Color.Silver;
+            this.dstb_pl.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.dstb_pl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dstb_pl.Font = new System.Drawing.Font("Segoe UI", 12.22642F);
+            this.dstb_pl.ForeColor = System.Drawing.Color.Black;
+            this.dstb_pl.FormattingEnabled = true;
+            this.dstb_pl.Location = new System.Drawing.Point(3, 48);
+            this.dstb_pl.Name = "dstb_pl";
+            this.dstb_pl.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dstb_pl.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.dstb_pl.Size = new System.Drawing.Size(209, 32);
+            this.dstb_pl.TabIndex = 0;
             // 
             // dstb_qrtb
             // 
@@ -476,16 +463,27 @@
             // dstb_ten
             // 
             this.dstb_ten.Location = new System.Drawing.Point(890, 222);
-            this.dstb_ten.Multiline = true;
             this.dstb_ten.Name = "dstb_ten";
-            this.dstb_ten.Size = new System.Drawing.Size(187, 28);
+            this.dstb_ten.Size = new System.Drawing.Size(187, 20);
             this.dstb_ten.TabIndex = 11;
+            // 
+            // gunaLabel6
+            // 
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 4.075472F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.Location = new System.Drawing.Point(15, 58);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(42, 10);
+            this.gunaLabel6.TabIndex = 12;
+            this.gunaLabel6.Text = "Chức năng :";
             // 
             // danhmucthietbi_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 730);
+            this.Controls.Add(this.gunaLabel6);
             this.Controls.Add(this.dstb_ten);
             this.Controls.Add(this.dstb_id);
             this.Controls.Add(this.dstb_chitiet);
@@ -525,17 +523,16 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
         private Guna.UI.WinForms.GunaButton dstb_phanloai;
-        private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaComboBox dstb_pl_vitri;
-        private Guna.UI.WinForms.GunaComboBox dstb_pl_chucnang;
-        private Guna.UI.WinForms.GunaComboBox dstb_pl_loai;
+        private Guna.UI.WinForms.GunaComboBox dstb_pl;
         private Guna.UI.WinForms.GunaPictureBox dstb_qrtb;
         private Guna.UI.WinForms.GunaButton dstb_xoa;
         private Guna.UI.WinForms.GunaButton dstb_chinhsua;
         private Guna.UI.WinForms.GunaButton dstb_chitiet;
         private System.Windows.Forms.TextBox dstb_id;
         private System.Windows.Forms.TextBox dstb_ten;
+        private Guna.UI.WinForms.GunaButton dstb_pl_huy;
+        private Guna.UI.WinForms.GunaLabel gunaLabel6;
+        private Guna.UI.WinForms.GunaTextBox dstb_pl_tukhoa;
     }
 }

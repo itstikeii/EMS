@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thietbi_them));
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.tb_them_qrcode = new Guna.UI.WinForms.GunaPictureBox();
             this.tb_them_nhhbh = new System.Windows.Forms.DateTimePicker();
             this.tb_them_ngaymua = new System.Windows.Forms.DateTimePicker();
             this.tb_them_id = new Guna.UI.WinForms.GunaTextBox();
@@ -64,7 +65,6 @@
             this.tb_them_huy = new Guna.UI.WinForms.GunaButton();
             this.tb_them_dong = new Guna.UI.WinForms.GunaButton();
             this.tb_them_taoQR = new Guna.UI.WinForms.GunaButton();
-            this.tb_them_qrcode = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tb_them_qrcode)).BeginInit();
             this.SuspendLayout();
@@ -121,6 +121,18 @@
             this.gunaGroupBox1.Text = "Thông tin thiết bị";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             this.gunaGroupBox1.Click += new System.EventHandler(this.gunaGroupBox1_Click);
+            // 
+            // tb_them_qrcode
+            // 
+            this.tb_them_qrcode.BackColor = System.Drawing.Color.White;
+            this.tb_them_qrcode.BaseColor = System.Drawing.Color.White;
+            this.tb_them_qrcode.Location = new System.Drawing.Point(694, 301);
+            this.tb_them_qrcode.Name = "tb_them_qrcode";
+            this.tb_them_qrcode.Size = new System.Drawing.Size(203, 159);
+            this.tb_them_qrcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.tb_them_qrcode.TabIndex = 32;
+            this.tb_them_qrcode.TabStop = false;
+            this.tb_them_qrcode.Click += new System.EventHandler(this.tb_them_qrcode_Click);
             // 
             // tb_them_nhhbh
             // 
@@ -239,6 +251,7 @@
             this.tb_them_mota.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_them_mota.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_them_mota.Location = new System.Drawing.Point(317, 301);
+            this.tb_them_mota.MultiLine = true;
             this.tb_them_mota.Name = "tb_them_mota";
             this.tb_them_mota.PasswordChar = '\0';
             this.tb_them_mota.Size = new System.Drawing.Size(351, 160);
@@ -578,18 +591,6 @@
             this.tb_them_taoQR.Text = "Tạo QR";
             this.tb_them_taoQR.Click += new System.EventHandler(this.tb_them_taoQR_Click);
             // 
-            // tb_them_qrcode
-            // 
-            this.tb_them_qrcode.BackColor = System.Drawing.Color.White;
-            this.tb_them_qrcode.BaseColor = System.Drawing.Color.White;
-            this.tb_them_qrcode.Location = new System.Drawing.Point(694, 301);
-            this.tb_them_qrcode.Name = "tb_them_qrcode";
-            this.tb_them_qrcode.Size = new System.Drawing.Size(203, 159);
-            this.tb_them_qrcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.tb_them_qrcode.TabIndex = 32;
-            this.tb_them_qrcode.TabStop = false;
-            this.tb_them_qrcode.Click += new System.EventHandler(this.tb_them_qrcode_Click);
-            // 
             // thietbi_them
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,7 +602,7 @@
             this.Controls.Add(this.tb_them_luu);
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.gunaLabel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "thietbi_them";
             this.Text = "thietbi_them";
             this.Load += new System.EventHandler(this.thietbi_them_Load);

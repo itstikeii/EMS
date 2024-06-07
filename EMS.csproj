@@ -84,11 +84,23 @@
     <Compile Include="admin\thietbi_chitiet.Designer.cs">
       <DependentUpon>thietbi_chitiet.cs</DependentUpon>
     </Compile>
+    <Compile Include="admin\thietbi_sua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\thietbi_sua.Designer.cs">
+      <DependentUpon>thietbi_sua.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin\thietbi_them.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="admin\thietbi_them.Designer.cs">
       <DependentUpon>thietbi_them.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin\thietbi_tinhtranghoatdong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\thietbi_tinhtranghoatdong.Designer.cs">
+      <DependentUpon>thietbi_tinhtranghoatdong.cs</DependentUpon>
     </Compile>
     <Compile Include="login\Form1.cs">
       <SubType>Form</SubType>
@@ -114,8 +126,14 @@
     <EmbeddedResource Include="admin\thietbi_chitiet.resx">
       <DependentUpon>thietbi_chitiet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="admin\thietbi_sua.resx">
+      <DependentUpon>thietbi_sua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin\thietbi_them.resx">
       <DependentUpon>thietbi_them.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\thietbi_tinhtranghoatdong.resx">
+      <DependentUpon>thietbi_tinhtranghoatdong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
