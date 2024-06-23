@@ -69,6 +69,7 @@ namespace EMS.admin
             OpenConnection();
 
             string sql_q1 = "SELECT * FROM thietbi WHERE id_thietbi = '"+id.ToString()+"'";
+           
             SqlCommand command1 = new SqlCommand(sql_q1, sqlcon);
            // Sử dụng tham số thay vì nối chuỗi
             SqlDataReader reader = command1.ExecuteReader();
@@ -85,6 +86,9 @@ namespace EMS.admin
                 tb_hien_gia.Text = reader["giathue_thietbi"].ToString();
                 tb_hien_soluong.Text = reader["soluong_thietbi"].ToString();
                 tb_hien_noidat.Text = reader["noidat"].ToString();
+                tb_hien_serial.Text = reader["serial_thietbi"].ToString();
+
+
 
                 // Xử lý DateTime nếu cần
                 if (reader["ngaymua_thietbi"] != DBNull.Value)
@@ -107,6 +111,43 @@ namespace EMS.admin
                         tb_hien_qrcode.Image = Image.FromStream(ms);
                     }
                 }
+
+                // Hiển thị trạng thái và tình trạng thiết bị
+                if (reader["trangthai_thietbi"].ToString().Equals("Online"))
+                {
+                    offline_thietbi.Visible = false;
+                    online_thietbi.Visible = true;
+                    gunaLabel6.Text = "Online";
+                }
+                else
+                {
+                    online_thietbi.Visible = false;
+                    offline_thietbi.Visible = true;
+                    gunaLabel6.Text = "Offline";
+                }
+                if (reader["tinhtrang_thietbi"].ToString().Equals("Hoạt động"))
+                {
+                    error_thietbi.Visible = false;
+                    active_thietbi.Visible = true;
+                }
+                else
+                {
+                    active_thietbi.Visible = false;
+                    if (reader["tinhtrang_thietbi"].ToString().Equals("Tắt"))
+                    {
+                        error_thietbi.Visible = true;
+                        active_thietbi.Visible = false;
+                    }
+                    else
+                    {
+                        error_thietbi.Visible = true;
+                        error_thietbi.Text = reader["tinhtrang_thietbi"].ToString();
+                        active_thietbi.Visible = false;
+                    }
+
+                }
+
+
             }
 
             reader.Close();
@@ -124,7 +165,7 @@ namespace EMS.admin
 
         private void cttb_xoa_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show(
+           DialogResult dialogResult = MessageBox.Show(
            "Bạn chắc chắn muốn xóa ?",
            "Xác nhận xóa",
            MessageBoxButtons.YesNo,
@@ -163,6 +204,11 @@ namespace EMS.admin
             {
                 // Hủy bỏ việc xóa dữ liệu
             }
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

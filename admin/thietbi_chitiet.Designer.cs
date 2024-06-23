@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thietbi_chitiet));
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
-            this.gunaButton5 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
+            this.offline_thietbi = new Guna.UI.WinForms.GunaButton();
+            this.online_thietbi = new Guna.UI.WinForms.GunaButton();
             this.tb_hien_qrcode = new Guna.UI.WinForms.GunaPictureBox();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.active_thietbi = new Guna.UI.WinForms.GunaButton();
             this.tb_hien_nhhbh = new System.Windows.Forms.DateTimePicker();
             this.tb_hien_ngaymua = new System.Windows.Forms.DateTimePicker();
             this.tb_hien_id = new Guna.UI.WinForms.GunaTextBox();
@@ -68,6 +68,7 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.cttb_inthongtin = new Guna.UI.WinForms.GunaButton();
             this.cttb_innhan = new Guna.UI.WinForms.GunaButton();
+            this.error_thietbi = new Guna.UI.WinForms.GunaButton();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tb_hien_qrcode)).BeginInit();
             this.SuspendLayout();
@@ -76,10 +77,11 @@
             // 
             this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Controls.Add(this.gunaButton5);
-            this.gunaGroupBox1.Controls.Add(this.gunaButton3);
+            this.gunaGroupBox1.Controls.Add(this.error_thietbi);
+            this.gunaGroupBox1.Controls.Add(this.offline_thietbi);
+            this.gunaGroupBox1.Controls.Add(this.online_thietbi);
             this.gunaGroupBox1.Controls.Add(this.tb_hien_qrcode);
-            this.gunaGroupBox1.Controls.Add(this.gunaButton1);
+            this.gunaGroupBox1.Controls.Add(this.active_thietbi);
             this.gunaGroupBox1.Controls.Add(this.tb_hien_nhhbh);
             this.gunaGroupBox1.Controls.Add(this.tb_hien_ngaymua);
             this.gunaGroupBox1.Controls.Add(this.tb_hien_id);
@@ -116,51 +118,51 @@
             this.gunaGroupBox1.Text = "Thông tin thiết bị";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             // 
-            // gunaButton5
+            // offline_thietbi
             // 
-            this.gunaButton5.AnimationHoverSpeed = 0.07F;
-            this.gunaButton5.AnimationSpeed = 0.03F;
-            this.gunaButton5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.gunaButton5.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton5.Enabled = false;
-            this.gunaButton5.Font = new System.Drawing.Font("Segoe UI", 8.150944F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton5.ForeColor = System.Drawing.Color.White;
-            this.gunaButton5.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton5.Image")));
-            this.gunaButton5.ImageSize = new System.Drawing.Size(30, 30);
-            this.gunaButton5.Location = new System.Drawing.Point(568, 58);
-            this.gunaButton5.Name = "gunaButton5";
-            this.gunaButton5.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton5.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton5.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton5.OnHoverImage = null;
-            this.gunaButton5.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton5.Radius = 10;
-            this.gunaButton5.Size = new System.Drawing.Size(48, 31);
-            this.gunaButton5.TabIndex = 34;
-            this.gunaButton5.Text = "Online";
+            this.offline_thietbi.AnimationHoverSpeed = 0.07F;
+            this.offline_thietbi.AnimationSpeed = 0.03F;
+            this.offline_thietbi.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.offline_thietbi.BorderColor = System.Drawing.Color.Black;
+            this.offline_thietbi.Enabled = false;
+            this.offline_thietbi.Font = new System.Drawing.Font("Segoe UI", 8.150944F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.offline_thietbi.ForeColor = System.Drawing.Color.White;
+            this.offline_thietbi.Image = ((System.Drawing.Image)(resources.GetObject("offline_thietbi.Image")));
+            this.offline_thietbi.ImageSize = new System.Drawing.Size(30, 30);
+            this.offline_thietbi.Location = new System.Drawing.Point(568, 58);
+            this.offline_thietbi.Name = "offline_thietbi";
+            this.offline_thietbi.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.offline_thietbi.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.offline_thietbi.OnHoverForeColor = System.Drawing.Color.White;
+            this.offline_thietbi.OnHoverImage = null;
+            this.offline_thietbi.OnPressedColor = System.Drawing.Color.Black;
+            this.offline_thietbi.Radius = 10;
+            this.offline_thietbi.Size = new System.Drawing.Size(48, 31);
+            this.offline_thietbi.TabIndex = 34;
+            this.offline_thietbi.Text = "Online";
             // 
-            // gunaButton3
+            // online_thietbi
             // 
-            this.gunaButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaButton3.AnimationSpeed = 0.03F;
-            this.gunaButton3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.gunaButton3.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.Enabled = false;
-            this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 8.150944F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton3.Image")));
-            this.gunaButton3.ImageSize = new System.Drawing.Size(30, 30);
-            this.gunaButton3.Location = new System.Drawing.Point(514, 58);
-            this.gunaButton3.Name = "gunaButton3";
-            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton3.OnHoverImage = null;
-            this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton3.Radius = 10;
-            this.gunaButton3.Size = new System.Drawing.Size(48, 31);
-            this.gunaButton3.TabIndex = 33;
-            this.gunaButton3.Text = "Online";
+            this.online_thietbi.AnimationHoverSpeed = 0.07F;
+            this.online_thietbi.AnimationSpeed = 0.03F;
+            this.online_thietbi.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.online_thietbi.BorderColor = System.Drawing.Color.Black;
+            this.online_thietbi.Enabled = false;
+            this.online_thietbi.Font = new System.Drawing.Font("Segoe UI", 8.150944F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.online_thietbi.ForeColor = System.Drawing.Color.White;
+            this.online_thietbi.Image = ((System.Drawing.Image)(resources.GetObject("online_thietbi.Image")));
+            this.online_thietbi.ImageSize = new System.Drawing.Size(30, 30);
+            this.online_thietbi.Location = new System.Drawing.Point(517, 58);
+            this.online_thietbi.Name = "online_thietbi";
+            this.online_thietbi.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.online_thietbi.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.online_thietbi.OnHoverForeColor = System.Drawing.Color.White;
+            this.online_thietbi.OnHoverImage = null;
+            this.online_thietbi.OnPressedColor = System.Drawing.Color.Black;
+            this.online_thietbi.Radius = 10;
+            this.online_thietbi.Size = new System.Drawing.Size(48, 31);
+            this.online_thietbi.TabIndex = 33;
+            this.online_thietbi.Text = "Online";
             // 
             // tb_hien_qrcode
             // 
@@ -174,28 +176,29 @@
             this.tb_hien_qrcode.TabIndex = 32;
             this.tb_hien_qrcode.TabStop = false;
             // 
-            // gunaButton1
+            // active_thietbi
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.Enabled = false;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 8.150944F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
-            this.gunaButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.gunaButton1.Location = new System.Drawing.Point(317, 58);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 10;
-            this.gunaButton1.Size = new System.Drawing.Size(123, 31);
-            this.gunaButton1.TabIndex = 11;
-            this.gunaButton1.Text = "Hoạt động";
+            this.active_thietbi.AnimationHoverSpeed = 0.07F;
+            this.active_thietbi.AnimationSpeed = 0.03F;
+            this.active_thietbi.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.active_thietbi.BorderColor = System.Drawing.Color.Black;
+            this.active_thietbi.Enabled = false;
+            this.active_thietbi.Font = new System.Drawing.Font("Segoe UI", 8.150944F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.active_thietbi.ForeColor = System.Drawing.Color.White;
+            this.active_thietbi.Image = ((System.Drawing.Image)(resources.GetObject("active_thietbi.Image")));
+            this.active_thietbi.ImageSize = new System.Drawing.Size(30, 30);
+            this.active_thietbi.Location = new System.Drawing.Point(306, 58);
+            this.active_thietbi.Name = "active_thietbi";
+            this.active_thietbi.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.active_thietbi.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.active_thietbi.OnHoverForeColor = System.Drawing.Color.White;
+            this.active_thietbi.OnHoverImage = null;
+            this.active_thietbi.OnPressedColor = System.Drawing.Color.Black;
+            this.active_thietbi.Radius = 10;
+            this.active_thietbi.Size = new System.Drawing.Size(119, 31);
+            this.active_thietbi.TabIndex = 11;
+            this.active_thietbi.Text = "Hoạt động";
+            this.active_thietbi.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // tb_hien_nhhbh
             // 
@@ -212,7 +215,7 @@
             this.tb_hien_ngaymua.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_hien_ngaymua.Enabled = false;
             this.tb_hien_ngaymua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.tb_hien_ngaymua.Location = new System.Drawing.Point(317, 117);
+            this.tb_hien_ngaymua.Location = new System.Drawing.Point(317, 125);
             this.tb_hien_ngaymua.Name = "tb_hien_ngaymua";
             this.tb_hien_ngaymua.Size = new System.Drawing.Size(200, 20);
             this.tb_hien_ngaymua.TabIndex = 30;
@@ -445,7 +448,7 @@
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel6.Location = new System.Drawing.Point(301, 97);
+            this.gunaLabel6.Location = new System.Drawing.Point(301, 105);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(79, 19);
             this.gunaLabel6.TabIndex = 8;
@@ -683,6 +686,29 @@
             this.cttb_innhan.TabIndex = 13;
             this.cttb_innhan.Text = "In nhãn";
             // 
+            // error_thietbi
+            // 
+            this.error_thietbi.AnimationHoverSpeed = 0.07F;
+            this.error_thietbi.AnimationSpeed = 0.03F;
+            this.error_thietbi.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.error_thietbi.BorderColor = System.Drawing.Color.Black;
+            this.error_thietbi.Enabled = false;
+            this.error_thietbi.Font = new System.Drawing.Font("Segoe UI", 8.150944F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.error_thietbi.ForeColor = System.Drawing.Color.White;
+            this.error_thietbi.Image = ((System.Drawing.Image)(resources.GetObject("error_thietbi.Image")));
+            this.error_thietbi.ImageSize = new System.Drawing.Size(30, 30);
+            this.error_thietbi.Location = new System.Drawing.Point(428, 58);
+            this.error_thietbi.Name = "error_thietbi";
+            this.error_thietbi.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.error_thietbi.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.error_thietbi.OnHoverForeColor = System.Drawing.Color.White;
+            this.error_thietbi.OnHoverImage = null;
+            this.error_thietbi.OnPressedColor = System.Drawing.Color.Black;
+            this.error_thietbi.Radius = 10;
+            this.error_thietbi.Size = new System.Drawing.Size(86, 31);
+            this.error_thietbi.TabIndex = 35;
+            this.error_thietbi.Text = "Lỗi";
+            // 
             // thietbi_chitiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -743,10 +769,11 @@
         private Guna.UI.WinForms.GunaButton cttb_chinhsua;
         private Guna.UI.WinForms.GunaButton tb_hien_dong;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaButton gunaButton3;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton online_thietbi;
+        private Guna.UI.WinForms.GunaButton active_thietbi;
         private Guna.UI.WinForms.GunaButton cttb_inthongtin;
         private Guna.UI.WinForms.GunaButton cttb_innhan;
-        private Guna.UI.WinForms.GunaButton gunaButton5;
+        private Guna.UI.WinForms.GunaButton offline_thietbi;
+        private Guna.UI.WinForms.GunaButton error_thietbi;
     }
 }

@@ -84,6 +84,7 @@ namespace EMS.admin
                 ds_thietbi.Columns[6].Visible = false;
                 ds_thietbi.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
                 ds_thietbi.ColumnHeadersVisible = true;
+                ds_thietbi.ColumnHeadersHeight = 40;
                 ds_thietbi.AllowUserToResizeColumns = false;
                 ds_thietbi.AllowUserToResizeRows = false;
                 foreach (DataGridViewColumn column in ds_thietbi.Columns)

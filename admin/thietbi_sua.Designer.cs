@@ -543,7 +543,7 @@
             this.tb_sua_huy.ForeColor = System.Drawing.Color.White;
             this.tb_sua_huy.Image = ((System.Drawing.Image)(resources.GetObject("tb_sua_huy.Image")));
             this.tb_sua_huy.ImageSize = new System.Drawing.Size(30, 30);
-            this.tb_sua_huy.Location = new System.Drawing.Point(187, 547);
+            this.tb_sua_huy.Location = new System.Drawing.Point(197, 547);
             this.tb_sua_huy.Name = "tb_sua_huy";
             this.tb_sua_huy.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.tb_sua_huy.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -566,7 +566,7 @@
             this.tb_sua_luu.ForeColor = System.Drawing.Color.White;
             this.tb_sua_luu.Image = ((System.Drawing.Image)(resources.GetObject("tb_sua_luu.Image")));
             this.tb_sua_luu.ImageSize = new System.Drawing.Size(30, 30);
-            this.tb_sua_luu.Location = new System.Drawing.Point(16, 547);
+            this.tb_sua_luu.Location = new System.Drawing.Point(26, 547);
             this.tb_sua_luu.Name = "tb_sua_luu";
             this.tb_sua_luu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.tb_sua_luu.OnHoverBorderColor = System.Drawing.Color.Black;

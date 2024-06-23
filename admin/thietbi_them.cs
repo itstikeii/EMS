@@ -134,12 +134,13 @@ namespace EMS.admin
             // Thêm tham số hình ảnh vào lệnh SQL
             
 
-            string query = "INSERT INTO thietbi (id_thietbi, ten_thietbi, loai_thietbi, chucnang_thietbi, model_thietbi, mota_thietbi, nhacungcap_thietbi, ngaymua_thietbi, giathue_thietbi, tinhtrang_thietbi, soluong_thietbi, ngayhetbaohanh_thietbi, noidat, qrcode_thietbi) " +
-                           "VALUES (@id, @ten, @loai, @chucnang, @model, @mota, @ncc, @ngaymua, @gia, @tinhtrang, @soluong, @ngayhetbaohanh, @noidat, @qr)";
+            string query = "INSERT INTO thietbi (id_thietbi, ten_thietbi, serial_thietbi, loai_thietbi, chucnang_thietbi, model_thietbi, mota_thietbi, nhacungcap_thietbi, ngaymua_thietbi, giathue_thietbi, tinhtrang_thietbi, soluong_thietbi, ngayhetbaohanh_thietbi, noidat, qrcode_thietbi) " +
+                           "VALUES (@id, @ten, @serial, @loai, @chucnang, @model, @mota, @ncc, @ngaymua, @gia, @tinhtrang, @soluong, @ngayhetbaohanh, @noidat, @qr)";
             command = new SqlCommand(query, sqlcon);
             // Thêm các tham số vào lệnh SQL
             command.Parameters.AddWithValue("@id", tb_them_id.Text);
             command.Parameters.AddWithValue("@ten", tb_them_ten.Text);
+            command.Parameters.AddWithValue("@serial", tb_them_serial.Text);
             command.Parameters.AddWithValue("@loai", tb_them_loai.Text);
             command.Parameters.AddWithValue("@chucnang", tb_them_chucnang.Text);
             command.Parameters.AddWithValue("@model", tb_add_model.Text);
@@ -179,6 +180,11 @@ namespace EMS.admin
         }
 
         private void tb_them_qrcode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaLabel16_Click(object sender, EventArgs e)
         {
 
         }

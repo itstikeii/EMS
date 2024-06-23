@@ -86,6 +86,7 @@
             this.tinhtrang_btn.Size = new System.Drawing.Size(224, 59);
             this.tinhtrang_btn.TabIndex = 2;
             this.tinhtrang_btn.Text = "Trình trạng thiết bị";
+            this.tinhtrang_btn.Click += new System.EventHandler(this.tinhtrang_btn_Click);
             // 
             // lichsu_btn
             // 
@@ -107,6 +108,7 @@
             this.lichsu_btn.Size = new System.Drawing.Size(224, 59);
             this.lichsu_btn.TabIndex = 3;
             this.lichsu_btn.Text = "Lịch sử sử dụng";
+            this.lichsu_btn.Click += new System.EventHandler(this.lichsu_btn_Click);
             // 
             // baotri_btn
             // 
@@ -128,6 +130,7 @@
             this.baotri_btn.Size = new System.Drawing.Size(224, 59);
             this.baotri_btn.TabIndex = 4;
             this.baotri_btn.Text = "Bảo trì, sửa chữa";
+            this.baotri_btn.Click += new System.EventHandler(this.baotri_btn_Click);
             // 
             // khovattu_btn
             // 

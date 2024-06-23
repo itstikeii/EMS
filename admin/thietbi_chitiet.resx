@@ -118,7 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="gunaButton5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="error_thietbi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAN0AAADdAXBTogcAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABsElEQVRYR82Xz07CQBDGezDqAxjUbhM4cCPeuXoC34kjd7zBu3gy4cAL6AET/7QGuJighJOadb7S
+        Ndvp0LRKs2zyIzDz7XzTlra7nta6GJ538KrUZaTUdajUDXH/otQHwHfEkIMGWrGGgBi0mfn+CRUfEG+E
+        Lgi0A8yVatqIQXDXah1SkV4YBO9W4XJs5vZQS/IAYvCxVjulieNUsf8xRk3JKxOIguCCJoSswC4IUZv7
+        pX48NRpnJIzYxF0SwcP2tM2PSTBhE6pgAq9MA5ToM2GV9FMNPNfr5xRcM1GKRaejZ+22mLOBBlopZ7GG
+        528DFBgyQYpFt6u/l0v9GUW5TSAHDbSYI2kshnEDD83mUfI0k0Tx0aCgGduaMOZmxE3knAl4whu33ZUk
+        MPDCGLyJIhoJeOP0j3iCk2fwV/OEkRf6/q2QyCAZfc3nMfYoYa7hjTMwzSS2IDVhj1LmG6ZoYMWCucCA
+        HzUGYiXNwWovGnB8CfbgT+j2NnT+IHL+KCYtLoO7lxE+nL+Ok7PgbkECnC/JkibcLUoNWDqT0M2y3OB0
+        Y2JwujWzcbY5zVDJ9lx7P1AekwAmc3kpAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="offline_thietbi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAABX1JREFUaEPN
         mYt1FDkQRR0CIRCCM4AM1hlABksG6wwgA8gAMoAMIIMlA8jA+6663kxJrVarhxmfvefIM10qfUoqVZfG
@@ -147,7 +161,7 @@
         6xph1DF+yyWN0Hjrktzp7u4/gog2tUZtvT8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="gunaButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="online_thietbi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAiJJREFUaEPt
         mTtLw1AUx7uLiJ9BBwUdfCziop+gi20JdahOYrG0lQ6CBKHVxamDhSodioqUZih0EVcR/A4KhQ4Fx7Z0
@@ -162,7 +176,7 @@
         quxBnTnsUQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="gunaButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="active_thietbi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAA/FJREFUaEPt
         mttvDFEcx/vkFhKJy4Mnj4L/gAdvIqHqVkUkRARBxH2jHjx6Ek/SRGgp0pak1S0qQS9Sc6uW1OpKVelm

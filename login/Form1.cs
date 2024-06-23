@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace EMS
 {
@@ -30,7 +31,14 @@ namespace EMS
         private void login_login_Click(object sender, EventArgs e)
         {
             admin.admin_home f1 = new admin.admin_home();
+            this.Hide();
+            f1.FormClosed += SecondForm_FormClosed; // Lắng nghe sự kiện FormClosed
             f1.Show();
+        }
+        private void SecondForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Hiển thị lại MainForm khi SecondForm đóng
+            this.Show();
         }
     }
 }

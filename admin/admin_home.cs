@@ -66,5 +66,20 @@ namespace EMS.admin
         {
             OpenChildForm(new admin.danhmucthietbi_form());
         }
+
+        private void lichsu_btn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tinhtrang_btn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new admin.thietbi_tinhtranghoatdong());
+        }
+
+        private void baotri_btn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new admin.thietbi_baotrisuachua());
+        }
     }
 }

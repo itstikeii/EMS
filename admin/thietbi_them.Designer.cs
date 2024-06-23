@@ -177,6 +177,7 @@
             this.gunaLabel16.Size = new System.Drawing.Size(77, 19);
             this.gunaLabel16.TabIndex = 28;
             this.gunaLabel16.Text = "ID thiết bị :";
+            this.gunaLabel16.Click += new System.EventHandler(this.gunaLabel16_Click);
             // 
             // gunaLabel15
             // 
